@@ -27,7 +27,7 @@ SECRET_KEY = '12b!2v81j263@929n(0=pb!8#*3(43na!i-78@p#o%5ie36uab'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jkakabo.pythonanywhere.com']
+ALLOWED_HOSTS = ['anpr-core.herokuapp.com']
 
 
 # Application definition
