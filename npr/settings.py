@@ -14,7 +14,6 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import dj_database_url
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -27,7 +26,7 @@ SECRET_KEY = '12b!2v81j263@929n(0=pb!8#*3(43na!i-78@p#o%5ie36uab'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['anpr-core.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'anpr-core.herokuapp.com']
 
 
 # Application definition
@@ -40,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'npr.core.apps.CoreConfig'
+    'npr.core.apps.CoreConfig',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -78,15 +78,11 @@ WSGI_APPLICATION = 'npr.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(default=os.getenv('DATABASE_URL'))
+DATABASES = {'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))}
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'jkakabo$npr',
-#         'HOST': 'jkakabo.mysql.pythonanywhere-services.com',
-#         'USERNAME': 'jkakabo',
-#         'PASSWORD': 'neutron45'
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
 
