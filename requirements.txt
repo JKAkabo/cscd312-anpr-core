@@ -9,7 +9,7 @@ imutils==0.5.3
 numpy==1.18.5
 opencv-contrib-python-headless==4.2.0.34
 opencv-python-headless==4.2.0.34
-Pillow==7.1.2
+Pillow==8.2.0
 psycopg2-binary==2.8.5
 pytesseract==0.3.4
 pytz==2020.1
